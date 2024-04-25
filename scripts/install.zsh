@@ -11,6 +11,9 @@ sudo pacman -Rsnu firefox
 # sudo pacman -Rsnu thunderbird
 # sudo pacman -Rsnu gnome-calendar
 
+sudo pacman-mirrors -c China
+sudo pacman -Syu
+
 sudo pacman -S --needed base-devel
 sudo pacman -S --needed linux-tools
 sudo pacman -S --needed fcitx5-im fcitx5-rime
