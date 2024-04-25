@@ -1,5 +1,12 @@
 #!/bin/zsh -f
 
+if [[ ! -d $HOME/.dotfiles ]]; then
+  git clone --bare https://github.com/demin-han/dotfiles.git $HOME/.dotfiles
+  git --git-dir=$HOME/.dotfiles --work-tree=$HOME checkout
+  git --git-dir=$HOME/.dotfiles --work-tree=$HOME config --local status.showUntrackedFiles no
+  return
+fi
+
 sudo pacman -Rsnu firefox
 # sudo pacman -Rsnu thunderbird
 # sudo pacman -Rsnu gnome-calendar
