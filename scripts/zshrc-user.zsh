@@ -18,7 +18,6 @@ plug "jeffreytse/zsh-vi-mode"
 # eval "$(fzf --zsh)"
 plug "Aloxaf/fzf-tab"
 
-
 # User local plugins 
 plug "$HOME/.config/zsh/plugins/common-aliases"
 plug "$HOME/.config/zsh/plugins/git"
@@ -31,6 +30,7 @@ alias rp='rr replay'
 alias n='nvim'
 
 # Exports
+export REPORTTIME=30
 export EDITOR=nvim
 export _RR_TRACE_DIR=/var/cache/rr
 export PYTHONPYCACHEPREFIX=/var/cache/pycache
