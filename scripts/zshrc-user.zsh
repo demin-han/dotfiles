@@ -42,3 +42,5 @@ export SCCACHE_DIR=
 
 export PATH=$CARGO_HOME/bin:$DATA_HOME/.local/bin:$PATH
 
+# Opts
+unsetopt globdots
