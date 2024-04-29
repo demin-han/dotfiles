@@ -44,3 +44,4 @@ export PATH=$CARGO_HOME/bin:$DATA_HOME/.local/bin:$PATH
 
 # Opts
 unsetopt globdots
+unsetopt nomatch
