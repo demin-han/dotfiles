@@ -30,13 +30,15 @@ alias rp='rr replay'
 alias n='nvim'
 
 # Exports
+export DATA_HOME=$HOME/Data
 export REPORTTIME=30
 export EDITOR=nvim
 export _RR_TRACE_DIR=/var/cache/rr
 export PYTHONPYCACHEPREFIX=/var/cache/pycache
 # export PYTHONDONTWRITEBYTECODE=1
-export RUSTUP_HOME=
-export CARGO_HOME=
+export RUSTUP_HOME=$DATA_HOME/.rustup
+export CARGO_HOME=$DATA_HOME/.cargo
 export SCCACHE_DIR=
 
+export PATH=$CARGO_HOME/bin:$DATA_HOME/.local/bin:$PATH
 
