@@ -21,6 +21,8 @@ plug "Aloxaf/fzf-tab"
 # User local plugins 
 plug "$HOME/.config/zsh/plugins/common-aliases"
 plug "$HOME/.config/zsh/plugins/git"
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
 # Alias
 alias dtf='export GIT_DIR=$HOME/.dotfiles && export GIT_WORK_TREE=$HOME'
