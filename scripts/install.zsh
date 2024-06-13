@@ -32,6 +32,7 @@ update_pkg() {
   sudo pacman -S --needed docker
   sudo pacman -S --needed jq nnn
   sudo pacman -S --needed rustup go
+  sudo pacman -S --needed act
 
   sudo mkdir -p -m 777 /var/cache/yay
   yay --builddir /var/cache/yay --save
@@ -57,6 +58,7 @@ update_cfg() {
 
   sudo mkdir -p -m 777 /var/cache/rr
   sudo mkdir -p -m 777 /var/cache/pycache
+  sudo usermod -aG docker $USER
 
   git clone https://github.com/gpakosz/.tmux.git $HOME/.tmux
   ln -sf $HOME/.tmux/.tmux.conf $HOME/.tmux.conf
