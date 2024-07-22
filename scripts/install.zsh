@@ -73,6 +73,7 @@ update_cfg() {
 
   # disable $HOME/.debug folder
   perf config buildid.dir=/dev/null
+  echo 'kernel.perf_event_paranoid=1' | sudo tee '/etc/sysctl.d/51-enable-perf-events.conf'
 }
 
 main() {
