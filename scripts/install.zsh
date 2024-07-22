@@ -23,7 +23,7 @@ update_pkg() {
   sudo pacman -S --needed tmux
   sudo pacman -S --needed neovim
   sudo pacman -S --needed cmake ninja meson scons
-  sudo pacman -S --needed gdb lldb lld mold
+  sudo pacman -S --needed clang llvm gdb lldb lld mold
   sudo pacman -S --needed fzf fd ripgrep
   sudo pacman -S --needed graphviz xdot
   sudo pacman -S --needed direnv
@@ -37,10 +37,9 @@ update_pkg() {
   sudo mkdir -p -m 777 /var/cache/yay
   yay --builddir /var/cache/yay --save
 
-  # yay -S --needed --noconfirm clash-verge-rev-bin
+  yay -S --needed --noconfirm clash-verge-rev-bin
   yay -S --needed --noconfirm google-chrome
   yay -S --needed --noconfirm bcompare
-  yay -S --needed --noconfirm git-pw
   yay -S --needed --noconfirm rr
 
   zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
