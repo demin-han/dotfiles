@@ -33,6 +33,7 @@ update_pkg() {
   sudo pacman -S --needed jq nnn
   sudo pacman -S --needed rustup go
   sudo pacman -S --needed act
+  sudo pacman -S --needed gnome-control-center-x11-scaling mutter-x11-scaling
 
   sudo mkdir -p -m 777 /var/cache/yay
   yay --builddir /var/cache/yay --save
