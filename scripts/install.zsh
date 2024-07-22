@@ -40,7 +40,7 @@ update_pkg() {
   yay -S --needed --noconfirm clash-verge-rev-bin
   yay -S --needed --noconfirm google-chrome
   yay -S --needed --noconfirm bcompare
-  yay -S --needed --noconfirm rr
+  yay -S --needed rr
 
   zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
 }
