@@ -30,7 +30,7 @@ update_pkg() {
   sudo pacman -S --needed z3
   sudo pacman -S --needed github-cli
   sudo pacman -S --needed docker
-  sudo pacman -S --needed jq nnn
+  sudo pacman -S --needed jq nnn btop sshfs
   sudo pacman -S --needed rustup go
   sudo pacman -S --needed act
   sudo pacman -S --needed gnome-control-center-x11-scaling mutter-x11-scaling
