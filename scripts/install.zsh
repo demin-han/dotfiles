@@ -16,23 +16,23 @@ update_pkg() {
   sudo pacman-mirrors -c China
   sudo pacman -Syu
 
-  sudo pacman -S --needed base-devel
-  sudo pacman -S --needed linux-tools
-  sudo pacman -S --needed fcitx5-im fcitx5-rime
-  sudo pacman -S --needed yay
-  sudo pacman -S --needed tmux
-  sudo pacman -S --needed neovim
-  sudo pacman -S --needed cmake ninja meson scons
-  sudo pacman -S --needed clang llvm gdb lldb lld mold
-  sudo pacman -S --needed fzf fd ripgrep
-  sudo pacman -S --needed graphviz xdot
-  sudo pacman -S --needed direnv
-  sudo pacman -S --needed z3
-  sudo pacman -S --needed github-cli
-  sudo pacman -S --needed docker
-  sudo pacman -S --needed jq nnn btop sshfs
-  sudo pacman -S --needed rustup go
-  sudo pacman -S --needed act
+  sudo pacman -S --needed --noconfirm base-devel
+  sudo pacman -S --needed --noconfirm linux-tools
+  sudo pacman -S --needed --noconfirm fcitx5-im fcitx5-rime
+  sudo pacman -S --needed --noconfirm yay
+  sudo pacman -S --needed --noconfirm tmux
+  sudo pacman -S --needed --noconfirm neovim
+  sudo pacman -S --needed --noconfirm cmake ninja meson scons
+  sudo pacman -S --needed --noconfirm clang llvm gdb lldb lld mold
+  sudo pacman -S --needed --noconfirm fzf fd ripgrep
+  sudo pacman -S --needed --noconfirm graphviz xdot
+  sudo pacman -S --needed --noconfirm direnv
+  sudo pacman -S --needed --noconfirm z3
+  sudo pacman -S --needed --noconfirm github-cli
+  sudo pacman -S --needed --noconfirm docker
+  sudo pacman -S --needed --noconfirm jq nnn btop sshfs gparted
+  sudo pacman -S --needed --noconfirm rustup go
+  sudo pacman -S --needed --noconfirm act
   sudo pacman -S --needed gnome-control-center-x11-scaling mutter-x11-scaling
 
   sudo mkdir -p -m 777 /var/cache/yay
