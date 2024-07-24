@@ -33,6 +33,7 @@ update_pkg() {
   sudo pacman -S --needed --noconfirm jq nnn btop sshfs gparted
   sudo pacman -S --needed --noconfirm rustup go
   sudo pacman -S --needed --noconfirm act
+  sudo pacman -S --needed --noconfirm bc gperf patchutils
   sudo pacman -S --needed gnome-control-center-x11-scaling mutter-x11-scaling
 
   sudo mkdir -p -m 777 /var/cache/yay
