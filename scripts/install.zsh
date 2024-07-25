@@ -34,6 +34,7 @@ update_pkg() {
   sudo pacman -S --needed --noconfirm rustup go
   sudo pacman -S --needed --noconfirm act
   sudo pacman -S --needed --noconfirm bc gperf patchutils
+  sudo pacman -S --needed --noconfirm remmina
   sudo pacman -S --needed gnome-control-center-x11-scaling mutter-x11-scaling
 
   sudo mkdir -p -m 777 /var/cache/yay
