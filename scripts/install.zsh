@@ -21,7 +21,7 @@ update_pkg() {
   sudo pacman -S --needed --noconfirm fcitx5-im fcitx5-rime
   sudo pacman -S --needed --noconfirm yay
   sudo pacman -S --needed --noconfirm tmux
-  sudo pacman -S --needed --noconfirm neovim
+  sudo pacman -S --needed --noconfirm neovim xclip
   sudo pacman -S --needed --noconfirm cmake ninja meson scons
   sudo pacman -S --needed --noconfirm clang llvm gdb lldb lld mold
   sudo pacman -S --needed --noconfirm fzf fd ripgrep
