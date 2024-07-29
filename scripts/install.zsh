@@ -50,7 +50,7 @@ update_pkg() {
 update_zsh_cfg() {
   echo "Update zsh config"
   if [[ ! -v ZAP_DIR ]]; then
-    zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+    zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1 || exit 1
   fi
   cat $HOME/.local/share/zap/templates/default-zshrc > $HOME/.zshrc
   cat $HOME/scripts/zshrc-user.zsh >> $HOME/.zshrc
@@ -64,7 +64,7 @@ update_cfg() {
   sudo mkdir -p -m 777 /var/cache/pycache
 
   if [[ ! -d $HOME/.tmux ]]; then
-    git clone https://github.com/gpakosz/.tmux.git $HOME/.tmux
+    git clone https://github.com/gpakosz/.tmux.git $HOME/.tmux || exit 1
     ln -sf $HOME/.tmux/.tmux.conf $HOME/.tmux.conf
     if [[ ! -f $HOME/.tmux.conf.local ]]; then
       cp $HOME/.tmux/.tmux.conf.local $HOME/
