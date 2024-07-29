@@ -45,11 +45,11 @@ update_pkg() {
   yay -S --needed --noconfirm bcompare
   yay -S --needed rr
 
-  zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
 }
 
 update_zsh_cfg() {
   echo "Update zsh config"
+  zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
   cat $HOME/.local/share/zap/templates/default-zshrc > $HOME/.zshrc
   cat $HOME/scripts/zshrc-user.zsh >> $HOME/.zshrc
 }
@@ -61,12 +61,13 @@ update_cfg() {
   sudo mkdir -p -m 777 /var/cache/rr
   sudo mkdir -p -m 777 /var/cache/pycache
 
-  git clone https://github.com/gpakosz/.tmux.git $HOME/.tmux
-  ln -sf $HOME/.tmux/.tmux.conf $HOME/.tmux.conf
-  if [[ ! -f $HOME/.tmux.conf.local ]]; then
-    cp $HOME/.tmux/.tmux.conf.local $HOME/
+  if [[ ! -d $HOME/.tmux ]]; then
+    git clone https://github.com/gpakosz/.tmux.git $HOME/.tmux
+    ln -sf $HOME/.tmux/.tmux.conf $HOME/.tmux.conf
+    if [[ ! -f $HOME/.tmux.conf.local ]]; then
+      cp $HOME/.tmux/.tmux.conf.local $HOME/
+    fi
   fi
-
 
   if [[ ! -d $HOME/.config/nvim ]]; then
     git clone https://github.com/LazyVim/starter $HOME/.config/nvim
