@@ -29,7 +29,7 @@ update_pkg() {
   sudo pacman -S --needed --noconfirm direnv
   sudo pacman -S --needed --noconfirm z3
   sudo pacman -S --needed --noconfirm github-cli
-  sudo pacman -S --needed --noconfirm docker
+  sudo pacman -S --needed --noconfirm podman podman-docker
   sudo pacman -S --needed --noconfirm jq nnn btop sshfs gparted
   sudo pacman -S --needed --noconfirm rustup go
   sudo pacman -S --needed --noconfirm act
@@ -60,7 +60,6 @@ update_cfg() {
 
   sudo mkdir -p -m 777 /var/cache/rr
   sudo mkdir -p -m 777 /var/cache/pycache
-  # sudo usermod -aG docker $USER
 
   git clone https://github.com/gpakosz/.tmux.git $HOME/.tmux
   ln -sf $HOME/.tmux/.tmux.conf $HOME/.tmux.conf
@@ -78,7 +77,6 @@ update_cfg() {
   perf config buildid.dir=/dev/null
   echo 'kernel.perf_event_paranoid=1' | sudo tee '/etc/sysctl.d/51-enable-perf-events.conf'
   sudo systemctl enable cronie
-  sudo systemctl enable docker
 }
 
 main() {
