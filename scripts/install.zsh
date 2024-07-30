@@ -26,7 +26,7 @@ update_pkg() {
   sudo pacman -S --needed --noconfirm clang llvm gdb lldb lld mold
   sudo pacman -S --needed --noconfirm fzf fd ripgrep
   sudo pacman -S --needed --noconfirm graphviz xdot
-  sudo pacman -S --needed --noconfirm direnv
+  sudo pacman -S --needed --noconfirm direnv poke
   sudo pacman -S --needed --noconfirm z3
   sudo pacman -S --needed --noconfirm github-cli
   sudo pacman -S --needed --noconfirm podman podman-docker
