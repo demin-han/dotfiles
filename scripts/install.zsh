@@ -9,9 +9,6 @@ fi
 
 update_pkg() {
   echo "Update package"
-  sudo pacman -Rsnu firefox
-  # sudo pacman -Rsnu thunderbird
-  # sudo pacman -Rsnu gnome-calendar
 
   sudo pacman-mirrors -c China
   sudo pacman -Syu
@@ -45,6 +42,7 @@ update_pkg() {
   yay -S --needed --noconfirm bcompare
   yay -S --needed rr
 
+  sudo pacman -Rsnu firefox
 }
 
 update_zsh_cfg() {
