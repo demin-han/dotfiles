@@ -86,7 +86,6 @@ main() {
   if [[ $# -eq 0 ]]; then
     PKG='-p'
     CFG='-c'
-    ZSH_CFG='-z'
   else
     zparseopts -D -K -- \
     {p,-pkg}=PKG \
