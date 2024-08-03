@@ -50,9 +50,10 @@ update_pkg() {
 update_zsh_cfg() {
   echo "Update zsh config"
   if [[ ! -v ZAP_DIR ]]; then
-    zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1 || exit 1
+    git clone https://github.com/zap-zsh/zap.git /tmp/zap || exit 1
   fi
-  cat $HOME/.local/share/zap/templates/default-zshrc > $HOME/.zshrc
+  /tmp/zap/install.zsh && \
+  cat $HOME/.local/share/zap/templates/default-zshrc > $HOME/.zshrc && \
   cat $HOME/scripts/zshrc-user.zsh >> $HOME/.zshrc
 }
 
