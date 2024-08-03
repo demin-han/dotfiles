@@ -82,6 +82,17 @@ update_cfg() {
   sudo systemctl enable systemd-oomd
 }
 
+update_softlink() {
+  ln -s $DATA_HOME/.local/share/containers $HOME/.local/share/
+  ln -s $DATA_HOME/.local/share/gnome-boxes $HOME/.local/share/
+
+  ln -s $DATA_HOME/.cache/google-chrome $HOME/.cache/
+  ln -s $DATA_HOME/.cache/huggingface $HOME/.cache/
+  ln -s $DATA_HOME/.cache/pip $HOME/.cache/
+
+  rm -f $HOME/Downloads/ && ln -s $DATA_HOME/Downloads $HOME/
+}
+
 main() {
   local PKG CFG ZSH_CFG
   if [[ $# -eq 0 ]]; then
@@ -92,12 +103,13 @@ main() {
     {p,-pkg}=PKG \
     {c,-cfg}=CFG \
     {z,-zsh}=ZSH_CFG \
-
+    {l,-link}=LINK
   fi
 
   [[ -n $PKG ]] && update_pkg
   [[ -n $CFG ]] && update_cfg
   [[ -n $ZSH_CFG ]] && update_zsh_cfg
+  [[ -n $LINK ]] && update_softlink
   return 0
 }
 
