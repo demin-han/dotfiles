@@ -40,7 +40,9 @@ export PYTHONPYCACHEPREFIX=/var/cache/pycache
 # export PYTHONDONTWRITEBYTECODE=1
 export RUSTUP_HOME=$DATA_HOME/.rustup
 export CARGO_HOME=$DATA_HOME/.cargo
-export SCCACHE_DIR=
+export PIPX_BIN_DIR=$DATA_HOME/.local/bin
+export PIPX_HOME=$DATA_HOME/.local/share/pipx
+export PIPX_MAN_DIR=$DATA_HOME/.local/share/man
 
 export PATH=$CARGO_HOME/bin:$DATA_HOME/.local/bin:$PATH
 
