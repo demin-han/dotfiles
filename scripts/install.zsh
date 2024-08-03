@@ -85,6 +85,7 @@ update_softlink() {
   ln -s $DATA_HOME/.local/share/gnome-boxes $HOME/.local/share/
 
   ln -s $DATA_HOME/Downloads $HOME/
+  ln -s $DATA_HOME/.config/google-chrome $HOME/.config/
 }
 
 main() {
