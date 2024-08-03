@@ -59,9 +59,6 @@ update_cfg() {
   echo "Update config"
   update_zsh_cfg
 
-  sudo mkdir -p -m 777 /var/cache/rr
-  sudo mkdir -p -m 777 /var/cache/pycache
-
   if [[ ! -d $HOME/.tmux ]]; then
     git clone https://github.com/gpakosz/.tmux.git $HOME/.tmux || exit 1
     ln -sf $HOME/.tmux/.tmux.conf $HOME/.tmux.conf
@@ -86,11 +83,7 @@ update_softlink() {
   ln -s $DATA_HOME/.local/share/containers $HOME/.local/share/
   ln -s $DATA_HOME/.local/share/gnome-boxes $HOME/.local/share/
 
-  ln -s $DATA_HOME/.cache/google-chrome $HOME/.cache/
-  ln -s $DATA_HOME/.cache/huggingface $HOME/.cache/
-  ln -s $DATA_HOME/.cache/pip $HOME/.cache/
-
-  rm -f $HOME/Downloads/ && ln -s $DATA_HOME/Downloads $HOME/
+  ln -s $DATA_HOME/Downloads $HOME/
 }
 
 main() {
