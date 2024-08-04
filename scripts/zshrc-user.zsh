@@ -21,6 +21,7 @@ plug "Aloxaf/fzf-tab"
 # User local plugins 
 plug "$HOME/.config/zsh/plugins/common-aliases"
 plug "$HOME/.config/zsh/plugins/git"
+plug "$HOME/.config/zsh/plugins/podman"
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
