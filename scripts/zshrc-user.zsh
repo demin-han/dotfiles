@@ -44,6 +44,7 @@ export PIPX_BIN_DIR=$DATA_HOME/.local/bin
 export PIPX_HOME=$DATA_HOME/.local/share/pipx
 export PIPX_MAN_DIR=$DATA_HOME/.local/share/man
 export _RR_TRACE_DIR=$DATA_HOME/.local/share/rr
+export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock
 
 export PATH=$CARGO_HOME/bin:$DATA_HOME/.local/bin:$PATH
 

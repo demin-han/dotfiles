@@ -79,6 +79,7 @@ update_cfg() {
   echo 'kernel.perf_event_paranoid=1' | sudo tee '/etc/sysctl.d/51-enable-perf-events.conf'
   sudo systemctl enable cronie
   sudo systemctl enable systemd-oomd
+  systemctl enable --user podman.socket
 }
 
 update_softlink() {
