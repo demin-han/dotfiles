@@ -26,7 +26,7 @@ update_pkg() {
   sudo pacman -S --needed --noconfirm direnv poke
   sudo pacman -S --needed --noconfirm z3
   sudo pacman -S --needed --noconfirm github-cli
-  sudo pacman -S --needed --noconfirm podman podman-docker podman-compose
+  sudo pacman -S --needed --noconfirm podman podman-docker podman-compose buildah skopeo distrobox
   sudo pacman -S --needed --noconfirm jq nnn btop sshfs gparted
   sudo pacman -S --needed --noconfirm rustup go
   sudo pacman -S --needed --noconfirm act

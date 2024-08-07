@@ -47,6 +47,9 @@ export _RR_TRACE_DIR=$DATA_HOME/.local/share/rr
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock
 
 export PATH=$CARGO_HOME/bin:$DATA_HOME/.local/bin:$PATH
+## distrobox
+export DBX_CONTAINER_CUSTOM_HOME=$DATA_HOME/.local/share/distrobox
+export DBX_CONTAINER_GENERATE_ENTRY=0
 
 # Opts
 unsetopt globdots
