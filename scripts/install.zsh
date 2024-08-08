@@ -37,12 +37,14 @@ update_pkg() {
   sudo pacman -S --needed --noconfirm qemu-user-static qemu-user-static-binfmt
   sudo pacman -S --needed gnome-control-center-x11-scaling mutter-x11-scaling
 
-  sudo mkdir -p -m 777 /var/cache/yay
-  yay --builddir /var/cache/yay --save
+  if [[ ! -d /var/cache/yay ]]; then
+    sudo mkdir -p -m 777 /var/cache/yay
+    yay --builddir /var/cache/yay --save
+  fi
 
-  yay -S --needed --noconfirm clash-verge-rev-bin
-  yay -S --needed --noconfirm google-chrome
-  yay -S --needed --noconfirm bcompare
+  yay -S --needed clash-verge-rev-bin
+  yay -S --needed google-chrome
+  yay -S --needed bcompare
   yay -S --needed rr
 
   sudo pacman -Rsnu firefox
