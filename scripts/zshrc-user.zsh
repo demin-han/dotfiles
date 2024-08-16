@@ -45,11 +45,16 @@ export PIPX_HOME=$DATA_HOME/.local/share/pipx
 export PIPX_MAN_DIR=$DATA_HOME/.local/share/man
 export _RR_TRACE_DIR=$DATA_HOME/.local/share/rr
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock
-
-export PATH=$CARGO_HOME/bin:$DATA_HOME/.local/bin:$PATH
 ## distrobox
 export DBX_CONTAINER_CUSTOM_HOME=$DATA_HOME/.local/share/distrobox
 export DBX_CONTAINER_GENERATE_ENTRY=0
+## cs
+export COURSIER_INSTALL_DIR=$DATA_HOME/.local/share/coursier/bin
+export COURSIER_CACHE=$DATA_HOME/.cache/coursier/v1
+export COURSIER_JVM_CACHE=$DATA_HOME/.cache/coursier/jvm
+export COURSIER_ARCHIVE_CACHE=$DATA_HOME/.cache/coursier/arc
+
+export PATH=$CARGO_HOME/bin:$DATA_HOME/.local/bin:$COURSIER_INSTALL_DIR:$PATH
 
 # Opts
 unsetopt globdots
