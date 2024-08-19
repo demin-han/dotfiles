@@ -33,7 +33,7 @@ update_pkg() {
   sudo pacman -S --needed --noconfirm bc gperf patchutils
   sudo pacman -S --needed --noconfirm remmina
   sudo pacman -S --needed --noconfirm python-pipx
-  sudo pacman -S --needed --noconfirm tk aria2
+  sudo pacman -S --needed --noconfirm tk expect aria2
   sudo pacman -S --needed --noconfirm nodejs npm
   sudo pacman -S --needed --noconfirm qemu-user-static qemu-user-static-binfmt
   sudo pacman -S --needed gnome-control-center-x11-scaling mutter-x11-scaling
