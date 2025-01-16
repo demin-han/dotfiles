@@ -29,7 +29,7 @@ update_pkg() {
   sudo pacman -S --needed --noconfirm podman podman-docker podman-compose buildah skopeo distrobox
   sudo pacman -S --needed --noconfirm jq nnn btop sshfs gparted
   sudo pacman -S --needed --noconfirm rustup go
-  sudo pacman -S --needed --noconfirm act
+  sudo pacman -S --needed --noconfirm picocom
   sudo pacman -S --needed --noconfirm bc gperf patchutils
   sudo pacman -S --needed --noconfirm remmina
   sudo pacman -S --needed --noconfirm python-pipx
@@ -84,6 +84,7 @@ update_cfg() {
   sudo systemctl enable cronie
   sudo systemctl enable systemd-oomd
   systemctl enable --user podman.socket
+  sudo usermod -a -G uucp $USER
 }
 
 update_softlink() {

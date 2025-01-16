@@ -31,6 +31,7 @@ alias rrrm='rr ls | grep -v latest-trace | xargs -L1 rr rm'
 alias rc='rr record --no-file-cloning'
 alias rp='rr replay'
 alias n='nvim'
+alias picocom='picocom -b 115200 /dev/ttyUSB0'
 
 # Exports
 export DATA_HOME=$HOME/Data
