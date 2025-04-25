@@ -44,9 +44,8 @@ export PYTHONPYCACHEPREFIX=$HOME/.cache/pycache
 # export PYTHONDONTWRITEBYTECODE=1
 export RUSTUP_HOME=$DATA_HOME/.rustup
 export CARGO_HOME=$DATA_HOME/.cargo
-export PIPX_BIN_DIR=$DATA_HOME/.local/bin
-export PIPX_HOME=$DATA_HOME/.local/share/pipx
-export PIPX_MAN_DIR=$DATA_HOME/.local/share/man
+export PIXI_HOME=$DATA_HOME/.pixi
+export PIXI_CACHE_DIR=$DATA_HOME/.cache/rattler
 export _RR_TRACE_DIR=$DATA_HOME/.local/share/rr
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock
 ## distrobox
