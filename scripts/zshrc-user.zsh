@@ -65,3 +65,5 @@ unsetopt nomatch
 
 setopt SHARE_HISTORY
 # setopt INC_APPEND_HISTORY
+
+eval "$(pixi completion --shell zsh)"
