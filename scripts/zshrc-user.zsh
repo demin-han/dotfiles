@@ -66,6 +66,7 @@ unsetopt nomatch
 
 setopt SHARE_HISTORY
 # setopt INC_APPEND_HISTORY
+setopt complete_aliases
 
 eval "$(pixi completion --shell zsh)"
 eval "$(zoxide init zsh)"
