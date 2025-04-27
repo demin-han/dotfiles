@@ -57,7 +57,7 @@ export COURSIER_CACHE=$DATA_HOME/.cache/coursier/v1
 export COURSIER_JVM_CACHE=$DATA_HOME/.cache/coursier/jvm
 export COURSIER_ARCHIVE_CACHE=$DATA_HOME/.cache/coursier/arc
 
-export PATH=$CARGO_HOME/bin:$DATA_HOME/.local/bin:$COURSIER_INSTALL_DIR:$PATH
+export PATH=$PIXI_HOME/bin:$CARGO_HOME/bin:$DATA_HOME/.local/bin:$COURSIER_INSTALL_DIR:$PATH
 
 # Opts
 unsetopt globdots
