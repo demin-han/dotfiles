@@ -35,6 +35,9 @@ alias rc='rr record --no-file-cloning'
 alias rp='rr replay'
 alias n='nvim'
 alias picocom='picocom -b 115200 /dev/ttyUSB0'
+alias oc='ouch -q c'
+alias od='ouch -q d'
+alias ol='ouch -q l'
 
 # Exports
 export DATA_HOME=$HOME/Data
