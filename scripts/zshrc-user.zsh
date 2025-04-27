@@ -69,3 +69,7 @@ setopt SHARE_HISTORY
 
 eval "$(pixi completion --shell zsh)"
 eval "$(zoxide init zsh)"
+
+if xhost | grep -q enabled; then
+  xhost + > /dev/null
+fi
