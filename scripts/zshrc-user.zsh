@@ -17,14 +17,11 @@ function zvm_config() {
 plug "jeffreytse/zsh-vi-mode"
 # eval "$(fzf --zsh)"
 plug "Aloxaf/fzf-tab"
-plug "agkozak/zsh-z"
 
 # User local plugins 
 plug "$HOME/.config/zsh/plugins/common-aliases"
 plug "$HOME/.config/zsh/plugins/git"
 plug "$HOME/.config/zsh/plugins/podman"
-plug "$HOME/.config/zsh/plugins/extract"
-plug "$HOME/.config/zsh/plugins/universalarchive"
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
