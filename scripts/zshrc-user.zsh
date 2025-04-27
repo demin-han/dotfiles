@@ -67,3 +67,4 @@ setopt SHARE_HISTORY
 # setopt INC_APPEND_HISTORY
 
 eval "$(pixi completion --shell zsh)"
+eval "$(zoxide init zsh)"
