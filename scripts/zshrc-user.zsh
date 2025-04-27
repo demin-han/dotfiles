@@ -41,6 +41,7 @@ export DATA_HOME=$HOME/Data
 export REPORTTIME=30
 export EDITOR=nvim
 export PYTHONPYCACHEPREFIX=$HOME/.cache/pycache
+export PYTHON_HISTORY=/dev/null
 # export PYTHONDONTWRITEBYTECODE=1
 export RUSTUP_HOME=$DATA_HOME/.rustup
 export CARGO_HOME=$DATA_HOME/.cargo
