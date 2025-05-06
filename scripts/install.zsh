@@ -32,7 +32,7 @@ update_pkg() {
   sudo pacman -S --needed --noconfirm picocom
   sudo pacman -S --needed --noconfirm bc gperf patchutils
   sudo pacman -S --needed --noconfirm remmina
-  sudo pacman -S --needed --noconfirm uv pixi ouch zoxide dua-cli
+  sudo pacman -S --needed --noconfirm uv pixi ouch zoxide dua-cli 3cpio
   sudo pacman -S --needed --noconfirm tk expect aria2
   sudo pacman -S --needed --noconfirm nodejs npm
   sudo pacman -S --needed --noconfirm qemu-user-static qemu-user-static-binfmt
