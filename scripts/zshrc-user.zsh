@@ -52,7 +52,6 @@ export CARGO_HOME=$DATA_HOME/.cargo
 export PIXI_HOME=$DATA_HOME/.pixi
 export PIXI_CACHE_DIR=$DATA_HOME/.cache/rattler
 export _RR_TRACE_DIR=$DATA_HOME/.local/share/rr
-export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock
 ## cs
 export COURSIER_INSTALL_DIR=$DATA_HOME/.local/share/coursier/bin
 export COURSIER_CACHE=$DATA_HOME/.cache/coursier/v1
