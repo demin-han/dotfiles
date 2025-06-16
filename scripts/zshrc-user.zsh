@@ -68,7 +68,7 @@ setopt SHARE_HISTORY
 # setopt INC_APPEND_HISTORY
 
 eval "$(pixi completion --shell zsh)"
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 if xhost | grep -q enabled; then
   xhost + > /dev/null
