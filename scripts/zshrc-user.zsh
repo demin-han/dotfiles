@@ -61,6 +61,8 @@ export COURSIER_ARCHIVE_CACHE=$DATA_HOME/.cache/coursier/arc
 export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
 ## path
 export PATH=$PIXI_HOME/bin:$CARGO_HOME/bin:$DATA_HOME/.local/bin:$COURSIER_INSTALL_DIR:$PATH
+# Deduplicate PATH
+typeset -U PATH
 
 # Opts
 unsetopt globdots
