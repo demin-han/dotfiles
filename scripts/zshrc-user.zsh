@@ -50,9 +50,6 @@ export PIXI_HOME=$DATA_HOME/.pixi
 export PIXI_CACHE_DIR=$DATA_HOME/.cache/rattler
 export _RR_TRACE_DIR=$DATA_HOME/.local/share/rr
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock
-## distrobox
-export DBX_CONTAINER_CUSTOM_HOME=$DATA_HOME/.local/share/distrobox
-export DBX_CONTAINER_GENERATE_ENTRY=0
 ## cs
 export COURSIER_INSTALL_DIR=$DATA_HOME/.local/share/coursier/bin
 export COURSIER_CACHE=$DATA_HOME/.cache/coursier/v1
