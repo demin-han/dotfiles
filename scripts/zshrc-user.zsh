@@ -15,15 +15,16 @@ function zvm_config() {
 }
 
 plug "jeffreytse/zsh-vi-mode"
-# eval "$(fzf --zsh)"
 plug "Aloxaf/fzf-tab"
 
 # User local plugins 
 plug "$HOME/.config/zsh/plugins/common-aliases"
 plug "$HOME/.config/zsh/plugins/git"
 plug "$HOME/.config/zsh/plugins/podman"
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
+
+eval "$(fzf --zsh)"
+eval "$(pixi completion --shell zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 # Alias
 alias dtf='export GIT_DIR=$HOME/.dotfiles && export GIT_WORK_TREE=$HOME'
@@ -66,9 +67,6 @@ unsetopt nomatch
 
 setopt SHARE_HISTORY
 # setopt INC_APPEND_HISTORY
-
-eval "$(pixi completion --shell zsh)"
-eval "$(zoxide init --cmd cd zsh)"
 
 if xhost | grep -q enabled; then
   xhost + > /dev/null
