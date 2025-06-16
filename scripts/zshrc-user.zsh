@@ -36,6 +36,9 @@ alias picocom='picocom -b 115200 /dev/ttyUSB0'
 alias oc='ouch -q compress'
 alias od='ouch -q decompress'
 alias ol='ouch -q list'
+## bathelp
+alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
+alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
 # Exports
 export DATA_HOME=$HOME/Data
@@ -55,7 +58,9 @@ export COURSIER_INSTALL_DIR=$DATA_HOME/.local/share/coursier/bin
 export COURSIER_CACHE=$DATA_HOME/.cache/coursier/v1
 export COURSIER_JVM_CACHE=$DATA_HOME/.cache/coursier/jvm
 export COURSIER_ARCHIVE_CACHE=$DATA_HOME/.cache/coursier/arc
-
+## batman
+export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
+## path
 export PATH=$PIXI_HOME/bin:$CARGO_HOME/bin:$DATA_HOME/.local/bin:$COURSIER_INSTALL_DIR:$PATH
 
 # Opts
