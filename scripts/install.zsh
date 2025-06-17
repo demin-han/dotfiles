@@ -51,19 +51,8 @@ update_pkg() {
   sudo pacman -Rsnu firefox
 }
 
-update_zsh_cfg() {
-  echo "Update zsh config"
-  if [[ ! -v ZAP_DIR ]]; then
-    git clone https://github.com/zap-zsh/zap.git /tmp/zap || exit 1
-  fi
-  /tmp/zap/install.zsh && \
-  cat $HOME/.local/share/zap/templates/default-zshrc > $HOME/.zshrc && \
-  cat $HOME/scripts/zshrc-user.zsh >> $HOME/.zshrc
-}
-
 update_cfg() {
   echo "Update config"
-  update_zsh_cfg
 
   if [[ ! -d $HOME/.tmux ]]; then
     git clone https://github.com/gpakosz/.tmux.git $HOME/.tmux || exit 1
@@ -96,7 +85,7 @@ update_softlink() {
 }
 
 main() {
-  local PKG CFG ZSH_CFG
+  local PKG CFG
   if [[ $# -eq 0 ]]; then
     PKG='-p'
     CFG='-c'
@@ -104,13 +93,11 @@ main() {
     zparseopts -D -K -- \
     {p,-pkg}=PKG \
     {c,-cfg}=CFG \
-    {z,-zsh}=ZSH_CFG \
     {l,-link}=LINK
   fi
 
   [[ -n $PKG ]] && update_pkg
   [[ -n $CFG ]] && update_cfg
-  [[ -n $ZSH_CFG ]] && update_zsh_cfg
   [[ -n $LINK ]] && update_softlink
   return 0
 }
