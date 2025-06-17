@@ -98,9 +98,9 @@ SPACESHIP_TIME_SHOW=true
 
 # Aliases
 #   LS/Eza
-alias ls='eza --icons=auto'
-alias ll='eza --icons=auto --time-style=long-iso -aghl'
-alias lt='eza --icons=auto --time-style=long-iso -aghlT -L 2'
+alias ls='eza --icons=auto --color-scale=all'
+alias ll='eza --icons=auto --color-scale=all --time-style=long-iso -aghl'
+alias lt='eza --icons=auto --color-scale=all --time-style=long-iso -aghlT -L 2'
 #   Git
 alias ga='git add'
 alias gb='git branch'
