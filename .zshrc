@@ -1,4 +1,5 @@
 setopt NO_BEEP
+setopt NO_NOMATCH
 setopt AUTO_CD
 setopt EXTENDED_GLOB
 setopt PROMPT_SUBST
