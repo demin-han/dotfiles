@@ -118,6 +118,7 @@ alias grt='cd "$(git rev-parse --show-toplevel || echo .)"'
 alias oc='ouch -q compress'
 alias od='ouch -q decompress'
 alias ol='ouch -q list'
+oz() { ouch -q compress $1 $(basename $1).${2:-tar.gz} }
 #   RR debugger
 alias rrrm='rr ls | grep -v latest-trace | xargs -L1 rr rm'
 alias rc='rr record --no-file-cloning'
