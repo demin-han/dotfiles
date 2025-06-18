@@ -66,6 +66,11 @@ if ! zgenom saved; then
   # zgenom compile $ZDOTDIR
 fi
 
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 (( $+commands[pixi]   )) && eval "$(pixi completion --shell zsh)"
