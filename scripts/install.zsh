@@ -36,7 +36,6 @@ update_pkg() {
   sudo pacman -S --needed --noconfirm tk expect aria2
   sudo pacman -S --needed --noconfirm nodejs npm
   sudo pacman -S --needed --noconfirm qemu-user-static qemu-user-static-binfmt
-  sudo pacman -S --needed gnome-control-center-x11-scaling mutter-x11-scaling
 
   if [[ ! -d /var/cache/yay ]]; then
     sudo mkdir -p -m 777 /var/cache/yay
