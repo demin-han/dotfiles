@@ -47,6 +47,7 @@ update_pkg() {
   yay -S --needed bcompare
   yay -S --needed rr
   yay -S --needed dufs-bin
+  yay -S --needed rsyncy-bin
 
   sudo pacman -Rsnu firefox
 }
