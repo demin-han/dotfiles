@@ -1,0 +1,17 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = "$time$all"
+
+[battery]
+disabled = true
+
+[directory]
+truncation_length = 0
+
+[scala]
+detect_folders = []
+
+[time]
+disabled = false
+format = '[$time]($style) '

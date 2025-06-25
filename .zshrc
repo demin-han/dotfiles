@@ -55,9 +55,6 @@ if ! zgenom saved; then
   zgenom load zsh-users/zsh-syntax-highlighting
   zgenom load jeffreytse/zsh-vi-mode
 
-  # theme
-  zgenom load spaceship-prompt/spaceship-prompt spaceship
-
   # save all to init script
   zgenom save
 
@@ -74,33 +71,9 @@ zle -N down-line-or-beginning-search
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(starship init zsh)"
 (( $+commands[pixi]   )) && eval "$(pixi completion --shell zsh)"
 (( $+commands[direnv] )) && eval "$(direnv hook zsh)"
-
-# spaceship setting
-SPACESHIP_PROMPT_ORDER=(
-  time           # Time stamps section
-  user           # Username section
-  dir            # Current directory section
-  host           # Hostname section
-  git            # Git section (git_branch + git_status)
-  python         # Python section
-  golang         # Go section
-  rust           # Rust section
-  scala          # Scala section
-  venv           # virtualenv section
-  uv             # uv section
-  nix_shell      # Nix shell
-  exec_time      # Execution time
-  async          # Async jobs indicator
-  line_sep       # Line break
-  jobs           # Background jobs indicator
-  sudo           # Sudo indicator
-  char           # Prompt character
-)
-SPACESHIP_DIR_TRUNC=0
-SPACESHIP_DIR_TRUNC_REPO=false
-SPACESHIP_TIME_SHOW=true
 
 # Aliases
 #   LS/Eza
