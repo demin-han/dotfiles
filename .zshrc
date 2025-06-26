@@ -73,7 +73,7 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+(( $+commands[zoxide] )) && eval "$(zoxide init --cmd cd zsh)"
 (( $+commands[pixi]   )) && eval "$(pixi completion --shell zsh)"
 (( $+commands[direnv] )) && eval "$(direnv hook zsh)"
 
