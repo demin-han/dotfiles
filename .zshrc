@@ -89,6 +89,7 @@ SPACESHIP_PROMPT_ORDER=(
   rust           # Rust section
   scala          # Scala section
   venv           # virtualenv section
+  conda          # conda/pixi virtualenv section
   uv             # uv section
   nix_shell      # Nix shell
   exec_time      # Execution time
