@@ -139,7 +139,7 @@ alias pc='podman container'
 alias di='docker image'
 alias dc='docker container'
 #   Misc 
-alias dtf='export GIT_DIR=$HOME/.dotfiles && export GIT_WORK_TREE=$HOME'
+alias dtf='export GIT_DIR=$HOME/.config/dotfiles && export GIT_WORK_TREE=$HOME'
 alias picocom='picocom -b 115200 /dev/ttyUSB0'
 alias n='nvim'
 alias -g -- N='| nvim'
