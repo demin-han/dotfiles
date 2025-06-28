@@ -55,12 +55,15 @@ update_pkg() {
 update_cfg() {
   echo "Update config"
 
-  if [[ ! -d $HOME/.tmux ]]; then
-    git clone https://github.com/gpakosz/.tmux.git $HOME/.tmux || exit 1
-    ln -sf $HOME/.tmux/.tmux.conf $HOME/.tmux.conf
-    if [[ ! -f $HOME/.tmux.conf.local ]]; then
-      cp $HOME/.tmux/.tmux.conf.local $HOME/
+  if [[ ! -d $HOME/.config/tmux/oh-my-tmux ]]; then
+    mkdir -p $HOME/.config/tmux
+    pushd $HOME/.config/tmux
+    git clone https://github.com/gpakosz/.tmux.git oh-my-tmux || exit 1
+    ln -sf oh-my-tmux/.tmux.conf tmux.conf
+    if [[ ! -f tmux.conf.local ]]; then
+      cp oh-my-tmux/.tmux.conf.local tmux.conf.local
     fi
+    popd
   fi
 
   if [[ ! -d $HOME/.config/nvim ]]; then
