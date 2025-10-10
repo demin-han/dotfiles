@@ -24,7 +24,7 @@ update_pkg() {
   sudo pacman -S --needed --noconfirm fzf fd ripgrep eza bat
   sudo pacman -S --needed --noconfirm graphviz xdot
   sudo pacman -S --needed --noconfirm direnv poke
-  sudo pacman -S --needed --noconfirm z3
+  sudo pacman -S --needed --noconfirm z3 cpio
   sudo pacman -S --needed --noconfirm github-cli perl-io-socket-ssl perl-authen-sasl repo
   sudo pacman -S --needed --noconfirm podman podman-docker podman-compose buildah skopeo
   sudo pacman -S --needed --noconfirm jq nnn btop sshfs gparted
