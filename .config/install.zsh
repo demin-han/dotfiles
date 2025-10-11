@@ -47,7 +47,6 @@ update_pkg() {
   yay -S --needed bcompare
   yay -S --needed rr
   yay -S --needed dufs-bin
-  yay -S --needed rsyncy-bin
   yay -S --needed imhex-bin
   yay -S --needed visual-studio-code-bin
 
