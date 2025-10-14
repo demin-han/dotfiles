@@ -131,7 +131,7 @@ alias rrrm='rr ls | grep -v latest-trace | xargs -L1 rr rm'
 alias rc='rr record --no-file-cloning'
 alias rp='rr replay'
 ##  Bat help
-alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
+# alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
 alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 ##  Podman/Docker
 alias pi='podman image'
