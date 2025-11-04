@@ -157,6 +157,7 @@ export PYTHONPYCACHEPREFIX=$DATA_HOME/.cache/pycache
 export PIP_CACHE_DIR=$DATA_HOME/.cache/pip
 export UV_CACHE_DIR=$DATA_HOME/.cache/uv
 export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
+export CMAKE_EXPORT_COMPILE_COMMANDS=ON
 
 if [[ "$(uname)" == "Linux" ]]; then
   export PIXI_CACHE_DIR=$DATA_HOME/.cache/rattler
