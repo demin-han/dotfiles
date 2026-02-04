@@ -49,6 +49,7 @@ update_pkg() {
   yay -S --needed dufs-bin
   yay -S --needed imhex-bin
   yay -S --needed visual-studio-code-bin
+  yay -S --needed prek-bin
 
   sudo pacman -Rsnu firefox
 }
