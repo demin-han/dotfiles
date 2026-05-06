@@ -4,7 +4,7 @@
 vim.opt.relativenumber = false -- Relative line numbers
 vim.opt.tabstop = 4
 vim.g.autoformat = false
-vim.lsp.set_log_level("off")
+vim.lsp.log.set_level("off")
 vim.o.undofile = false
 vim.o.swapfile = false
 vim.o.wrap = true
