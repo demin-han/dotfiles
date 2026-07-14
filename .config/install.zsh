@@ -32,11 +32,12 @@ update_pkg() {
   sudo pacman -S --needed --noconfirm picocom
   sudo pacman -S --needed --noconfirm bc gperf patchutils
   sudo pacman -S --needed --noconfirm remmina
-  sudo pacman -S --needed --noconfirm uv pixi ouch zoxide dua-cli 3cpio binwalk
+  sudo pacman -S --needed --noconfirm ouch zoxide dua-cli 3cpio binwalk
   sudo pacman -S --needed --noconfirm tk expect aria2
   sudo pacman -S --needed --noconfirm nodejs npm
   sudo pacman -S --needed --noconfirm qemu-user-static qemu-user-static-binfmt
   sudo pacman -S --needed --noconfirm typst typstyle
+  sudo pacman -S --needed --noconfirm pixi uv ruff ty
 
   if [[ ! -d /var/cache/yay ]]; then
     sudo mkdir -p -m 777 /var/cache/yay
